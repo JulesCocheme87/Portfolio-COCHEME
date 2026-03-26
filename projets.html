@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Jules Cochemé</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jules Cochemé</a>
+            <ul>
+                <li><a href="index.html">Profil</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+                <li><a href="bts-sio.html">BTS SIO</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="veille-technologique.html">Veille Tech</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="section">
+            <h1 class="section-title">Mes Projets</h1>
+            <p style="text-align: center; max-width: 800px; margin: -2rem auto 4rem; color: var(--text-muted);">
+                Voici une sélection des projets réalisés durant ma formation et mon alternance.
+                Chaque projet est accompagné d'une documentation technique détaillée.
+            </p>
+
+            <div class="content-grid">
+                <!-- BTSSIO-APIREST1 -->
+                <div class="content-box project-card">
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">SQL Server</span>
+                    </div>
+                    <h3>BTSSIO-APIREST1 (Gestion de Bibliothèque)</h3>
+                    <p>
+                        Développement d'une API REST robuste avec FastAPI couplée à un client lourd sécurisé en Tkinter.
+                        Ce projet permet la gestion complète d'une bibliothèque en dialoguant avec une base de données
+                        SQL Server.
+                        (Authentification, CRUD auteurs/livres/emprunteurs).
+                    </p>
+                    <a href="https://github.com/JulesCocheme87/BTSSIO-APIREST1" target="_blank" class="btn-primary">Voir
+                        sur GitHub</a>
+                </div>
+
+                <!-- Symfony -->
+                <div class="content-box project-card">
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tech-tag">Symfony 7.3</span>
+                        <span class="tech-tag">PHP 8.2</span>
+                        <span class="tech-tag">Doctrine ORM</span>
+                        <span class="tech-tag">Twig & UX</span>
+                    </div>
+                    <h3>Application Web Symfony</h3>
+                    <p>
+                        Conception et développement d'une application web moderne respectant le pattern MVC.
+                        Implémentation d'un système de sécurité complet (authentification, autorisation) et gestion de
+                        base de données avancée avec Doctrine ORM.
+                    </p>
+                    <a href="https://github.com/JulesCocheme87/symfony" target="_blank" class="btn-primary">Voir sur
+                        GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:jules.cocheme@gmail.com">Email</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+        <p>&copy; 2025 Jules Cochemé - Portfolio Premium</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

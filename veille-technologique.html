@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Jules Cochemé</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jules Cochemé</a>
+            <ul>
+                <li><a href="index.html">Profil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="bts-sio.html">BTS SIO</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="veille-technologique.html" class="active">Veille Tech</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero section"
+            style="padding-top: 4rem; padding-bottom: 2rem; border-bottom: 1px solid var(--glass-border); margin-bottom: 4rem;">
+            <div
+                style="display:inline-block; padding: 0.5rem 1.2rem; background: rgba(45, 212, 191, 0.1); border: 1px solid var(--accent); border-radius: 50px; color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase;">
+                <span style="margin-right: 0.5rem; animation: pulse 2s infinite;">🔴</span> Live Feed
+            </div>
+            <h1 class="section-title" style="margin-bottom: 1.5rem;">Veille Technologique</h1>
+            <p
+                style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 1.15rem; line-height: 1.7;">
+                Actualités et analyses automatisées recensant les dernières avancées majeures en
+                <strong style="color:var(--text-main); font-weight: 600;">Cybersécurité</strong> et
+                <strong style="color:var(--text-main); font-weight: 600;">Développement Logiciel</strong>.
+            </p>
+        </section>
+
+        <section class="section" style="margin-top: 0;">
+            <div id="veille-loader" style="text-align: center; padding: 5rem 0;">
+                <h3 style="color: var(--accent-color); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 2rem;">
+                    Synchronisation des flux RSS en cours...</h3>
+                <div class="spinner"
+                    style="margin: 0 auto; width: 50px; height: 50px; border: 3px solid rgba(139, 92, 246, 0.2); border-top: 3px solid var(--accent-color); border-radius: 50%; animation: spin 1s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;">
+                </div>
+                <style>
+                    @keyframes spin {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                </style>
+            </div>
+
+            <div id="veille-container" class="news-grid" style="display: none;">
+                <!-- Les articles seront injectés ici par veille.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:jules.cocheme@gmail.com">Email</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+        <p>&copy; 2025 Jules Cochemé - Portfolio Premium</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="veille.js"></script>
+</body>
+
+</html>

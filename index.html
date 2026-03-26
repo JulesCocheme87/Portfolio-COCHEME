@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jules Cochemé | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jules Cochemé</a>
+            <ul>
+                <li><a href="index.html" class="active">Profil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="bts-sio.html">BTS SIO</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="veille-technologique.html">Veille Tech</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section merged with Profile -->
+        <section class="hero section">
+            <div class="profile-img-container">
+                <img src="jules-profile.jpg" alt="Jules Cochemé" class="profile-img">
+            </div>
+            <h1>Bonjour, je suis <span style="color: var(--accent)">Jules</span></h1>
+            <div class="typewriter" id="typewriter"></div>
+            <p class="hero-description">
+                Étudiant en BTS SIO option SLAM et apprenti développeur à Limoges Métropole.
+                Passionné par la création de solutions logicielles modernes et performantes.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="projets.html" class="btn-primary">Voir mes projets</a>
+                <a href="fichiers/CV.pdf" target="_blank" class="btn-secondary">Mon CV (PDF)</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h2>🛠️ Compétences Techniques</h2>
+                    <p>Au cours de ma formation et de mon alternance, j'ai développé une expertise sur plusieurs
+                        technologies :</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tech-tag">PHP / Symfony</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">SQL (MySQL)</span>
+                        <span class="tech-tag">HTML / CSS / JS</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h2>🎯 Mes Objectifs</h2>
+                    <p>Passionné par le développement, je souhaite devenir développeur fullstack et contribuer à des
+                        projets innovants.</p>
+                    <ul>
+                        <li>Obtenir mon BTS SIO.</li>
+                        <li>Poursuivre en cycle ingénieur.</li>
+                        <li>Approfondir le DevOps et l'IA.</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h2>📚 Parcours Scolaire</h2>
+                    <ul>
+                        <li><strong>BTS SIO SLAM</strong> - Lycée Valadon (En cours)</li>
+                        <li><strong>Bac Pro SN</strong> - Mention TB (2024)</li>
+                        <li><strong>Brevet</strong> - Mention TB (2021)</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h2>💼 Expérience Pro</h2>
+                    <p>Alternance à <strong>Limoges Métropole</strong> :</p>
+                    <ul>
+                        <li>Développement d'applications internes.</li>
+                        <li>Maintenance et support technique.</li>
+                        <li>Gestion de bases de données.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:jules.cocheme@gmail.com">Email</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+        <p>&copy; 2025 Jules Cochemé - Portfolio Premium</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Inline typewriter specifically for home
+        const words = ["Étudiant en BTS SIO SLAM", "Apprenti Développeur", "Passionné de Code"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.getElementById('typewriter');
+
+        function type() {
+            if (!typewriterElement) return;
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
+</body>
+
+</html>
